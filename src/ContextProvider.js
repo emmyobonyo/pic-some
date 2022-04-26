@@ -10,7 +10,7 @@ function ContextProvider({children}){
             .then(res => res.json())
             .then(data => setAllPhotos(data))
     }, [])
-    
+
     function toggleFavorite(id) {
         const updatedArr = allPhotos.map(photo => {
             if(photo.id === id) {
@@ -22,8 +22,14 @@ function ContextProvider({children}){
         })
         setAllPhotos(updatedArr)
     }
+
+    function addToCart(newItem) {
+        setCartItems(prevItems => [...prevItems, newItem])
+    }
+ 
+    console.log(cartItems)
     return(
-        <Context.Provider value={{allPhotos, toggleFavorite}}>
+        <Context.Provider value={{allPhotos, toggleFavorite, cartItems, addToCart}}>
             {children}
         </Context.Provider>
     )
