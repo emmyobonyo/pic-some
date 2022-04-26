@@ -11,12 +11,12 @@ function Header() {
         <Link to='/cart'><i className="ri-shopping-cart-line ri-fw ri-2x"></i></Link>
       </header>
       <Routes>
-        <Route 
+        <Route
           exact path='/'
           element = {<Photos />}
           >
         </Route>
-        <Route  
+        <Route
           path='/cart'
           element = {<Cart />}
           >

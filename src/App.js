@@ -11,14 +11,13 @@ function App() {
         <div>
             <Header />
             <Routes>
-                <Route 
+                {/* <Route
                   exact path="/"
-                  element={<Photos />}>                    
-                </Route>
-                
+                  element={<Photos />}>
+                </Route> */}
                 <Route 
                   path="/cart" 
-                  element={<Cart />}>                    
+                  element={<Cart />}>
                 </Route>
             </Routes>
         </div>
